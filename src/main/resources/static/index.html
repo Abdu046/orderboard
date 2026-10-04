@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OrderBoard — Beta</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="container">
+  <section id="loginView" class="card login-card">
+    <h1>OrderBoard</h1>
+    <p class="muted">Единая доска заказов магазина и поставщика</p>
+    <label>Логин<input id="username" value="seller"></label>
+    <label>Пароль<input id="password" type="password" value="1234"></label>
+    <button id="loginBtn">Войти</button>
+    <div class="hint">Для теста: seller / 1234 или supplier / 1234</div>
+  </section>
+
+  <section id="appView" hidden>
+    <header class="topbar">
+      <div><h1>OrderBoard</h1><span id="who" class="muted"></span></div>
+      <div class="statusWrap"><span id="statusBadge" class="badge">Черновик</span></div>
+    </header>
+
+    <div class="grid">
+      <main class="card">
+        <div class="row between">
+          <div>
+            <h2>Заказ на завтра</h2>
+            <div id="date" class="muted"></div>
+          </div>
+          <div id="lastUpdate" class="muted"></div>
+        </div>
+        <div id="sellerPanel" hidden>
+          <p class="muted">После смены укажи, сколько нужно принести завтра. Можно менять количество и сразу отправить поставщику.</p>
+          <div id="products"></div>
+          <div class="submitBox">
+            <div><strong id="totalItems">0</strong> единиц товаров</div>
+            <button id="submitBtn">✅ Смена закончена — отправить поставщику</button>
+          </div>
+        </div>
+        <div id="supplierPanel" hidden>
+          <p class="muted">Здесь ты увидишь заявку магазина. Проверь количество и подтверди, что привезёшь товар завтра.</p>
+          <div id="supplierProducts"></div>
+          <button id="confirmBtn">📦 Подтвердить поставку на завтра</button>
+        </div>
+      </main>
+
+      <aside class="card">
+        <h2>🔔 Уведомления</h2>
+        <div id="notifications" class="notifications"></div>
+      </aside>
+    </div>
+  </section>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>
