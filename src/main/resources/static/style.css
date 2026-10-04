@@ -1,0 +1,29 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background:#f4f6f8; color:#17202a; }
+.container { max-width: 1150px; margin: 0 auto; padding: 24px; }
+.card { background:white; border-radius:18px; padding:22px; box-shadow:0 7px 25px rgba(20,30,40,.08); }
+.login-card { max-width:420px; margin:70px auto; }
+h1,h2 { margin-top:0; }
+label { display:block; margin:16px 0; font-weight:600; }
+input { width:100%; padding:12px; margin-top:7px; border:1px solid #d8dde3; border-radius:10px; font-size:16px; }
+button { border:0; border-radius:10px; padding:12px 16px; font-weight:700; cursor:pointer; background:#17202a; color:white; }
+button:hover { opacity:.9; }
+.muted { color:#718096; }
+.hint { margin-top:14px; font-size:13px; color:#718096; }
+.topbar { display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; }
+.grid { display:grid; grid-template-columns: 2fr 1fr; gap:18px; }
+.row { display:flex; align-items:center; gap:14px; }
+.between { justify-content:space-between; }
+.badge { padding:8px 12px; border-radius:999px; background:#edf2f7; font-size:13px; font-weight:700; }
+.badge.submitted { background:#fff3cd; color:#856404; }
+.badge.confirmed { background:#d1fae5; color:#065f46; }
+.supplier-block { margin:22px 0; }
+.supplier-title { font-weight:800; font-size:18px; margin-bottom:10px; }
+.product { display:grid; grid-template-columns: 1fr 120px; align-items:center; gap:14px; border-top:1px solid #edf0f2; padding:12px 0; }
+.qty { text-align:center; }
+.submitBox { margin-top:20px; padding-top:18px; border-top:1px solid #edf0f2; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.notifications { display:flex; flex-direction:column; gap:10px; }
+.note { padding:12px; background:#f7fafc; border-radius:12px; }
+.note small { color:#718096; display:block; margin-top:6px; }
+.ok { padding:12px; margin:12px 0; border-radius:10px; background:#d1fae5; color:#065f46; }
+@media (max-width:800px) { .grid{grid-template-columns:1fr;} .submitBox{flex-direction:column; align-items:stretch;} .product{grid-template-columns:1fr 100px;} }
